@@ -12,26 +12,4 @@ const Settings = {
 		url.searchParams.set(key, value);
 		location.href = url.href;
 	},
-
-	hostGame: function(){
-
-		let url = new URL(location.href);
-		url.searchParams.set('remote', 'host');
-		location.href = url.href;
-	},
-
-	joinGame: function(){
-
-		let hash = prompt('Please insert key');
-		let url = new URL(location.href);
-		url.searchParams.set('remote', hash);
-		location.href = url.href;
-	},
-
-	localGame: function(){
-
-		let url = new URL(location.href);
-		url.searchParams.delete('remote');
-		location.href = url.href;
-	}
 };
